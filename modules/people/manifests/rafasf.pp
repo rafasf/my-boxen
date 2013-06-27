@@ -12,6 +12,8 @@ class people::rafasf {
   include sparrow
   include handbrake
   include dropbox
+  include kindle
+  include transmission
   
   include osx::global::enable_keyboard_control_access
   include osx::dock::autohide
@@ -22,6 +24,10 @@ class people::rafasf {
   android::version { '14':
     options => ['platform', 'add_on', 'system_image' ]
   }
+  android::version { '17':
+    options => ['platform', 'system_image' ]
+  }
+  android::extra { 'extra-intel-Hardware_Accelerated_Execution_Manager': }
   include android::platform_tools
 
   $home = "/Users/rferreir"
