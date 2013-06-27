@@ -10,6 +10,7 @@ class people::rafasf {
   include quicksilver
   include sparrow
   include handbrake
+  include dropbox
   
   include osx::global::enable_keyboard_control_access
   include osx::dock::autohide
