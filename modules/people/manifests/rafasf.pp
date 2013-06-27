@@ -4,6 +4,7 @@ class people::rafasf {
   include tmux
   include java
   include clojure
+  include android
   include skype
   include chrome
   include caffeine
@@ -17,6 +18,11 @@ class people::rafasf {
   include osx::dock::dim_hidden_apps
   include osx::finder::unhide_library
   include osx::no_network_dsstores
+
+  android::version { '14':
+    options => ['platform', 'add_on', 'system_image' ]
+  }
+  include android::platform_tools
 
   $home = "/Users/rferreir"
   $dots = "${home}/.dots"

@@ -29,6 +29,7 @@ github "tmux",               "1.0.2"
 
 github "java",               "1.1.1"
 github "clojure",            "1.2.0"
+github "android",            "0.0.6"
 
 github "intellij",           "1.2.0"
 github "skype",              "1.0.3"
