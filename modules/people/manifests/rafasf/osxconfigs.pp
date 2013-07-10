@@ -1,4 +1,5 @@
 class people::rafasf::osxconfigs {
+  include boxen::security
   include osx::global::enable_keyboard_control_access
   include osx::dock::autohide
   include osx::dock::dim_hidden_apps
@@ -57,7 +58,7 @@ class people::rafasf::osxconfigs {
     value  => true,
     user   => $::boxen_user
   }
-  
+
   boxen::osx_defaults { 'standard function keys':
     domain => 'NSGlobalDomain',
     key    => 'com.apple.keyboard.fnState',
